@@ -1,4 +1,5 @@
-"""proyecto_yuyitos URL Configuration
+"""
+proyecto_yuyitos URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -20,13 +21,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('web_yuyitos.urls')) ##recupera rutas de yuyitos web
+    path('', include('web_yuyitos.urls')), ##recupera rutas de yuyitos web
 ]
 
 ##incluir en path, la direccion y nombre de directorio 'MEDIA'!
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
-
 ###NOMBRE DE PAGINA 
-admin.site.site_header = 'Administración de almacen Los Yuyitos'
+admin.site.site_header = 'Administracion de almacen Los Yuyitos'

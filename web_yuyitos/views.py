@@ -4,7 +4,7 @@ from django.db import reset_queries
 from django.http import response
 from datetime import datetime
 from django.shortcuts import render
-from .models import Tecnico, Cliente, Repuesto, Proveedor, Atencion_hora, Servicio, Order_repuesto, Galeria, Vehiculo
+from .models import Cliente, Proveedor, Producto, Abono, Venta, DetalleVenta
 # importar el modelo de usuarios
 from django.contrib.auth.models import User
 # importar librerias de acceso a login
@@ -32,7 +32,7 @@ def logear(request):
         us = authenticate(request,username=usuario,password=contra)
         if us is not None and us.is_active:
             login_aut(request,us)
-            tipos = Tecnico.objects.all()
+            tipos = User.objects.all()
             contexto ={"tipos":tipos}
             return render(request, "index.html",contexto)          
         else:
@@ -71,7 +71,7 @@ def registro(request):
 ##cierre de sesion
 def cerrar_sesion(request):
     logout(request)
-    tipos = Tecnico.objects.all()
+    tipos = User.objects.all()
     contexto ={"tipos":tipos}
     return render(request, "index.html",contexto)
 
