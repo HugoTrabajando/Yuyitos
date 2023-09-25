@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+<!-- ESCRIBE TITULO -->
+{% block titulo %}- Inicio{% endblock titulo %}
+<!-- FIN ESCRIBE TITULO -->
+
+<!-- ESCRIBIR COSAS PARA ESTA PAGINA -->
+{% block cosas1 %}
+<!--primera parte-->
+
+<div class="orden1" style="background: #32c185;">
+	<h1 class="orden1">Nuestros servicios</h1>
+	<h3 class="orden1">Ofrecemos servicio técnico reparando tu vehiculo, y provisión de repuestos.</h3>
+	<h3 class="orden1">Distribuimos repuestos originales de los vehiculos. También nuestro servicio técnico es de calidad, y asegura mediante pruebas al vehiculo que se esté reparando.</h3>
+	<h3 class="orden1">Todo se puede pagar de forma presencial o por transferencia bancaría desde nuestra página web. Debe solicitar un servicio para así poder cancelar con transferencia.</h3>
+
+</div>
+
+{% endblock cosas1 %}
+<!-- FIN ESCRIBIR COSAS PARA ESTA PAGINA-->
+
+{% block index_cosas1 %}
+			<div class="convenio">
+				<h1 class="convenio">Marcas con las que trabajamos</h1>
+				<h3 class="convenio">Somos una empresa que se une y se asesora con los mejores. Siempre damos pasos para adelante a la vanguardia, innovación y progreso. Las siguientes compañias nos abastecen porque creemos en la calidad y en la inteligencia para invertir en durabilidad.</h3>
+				<div class="nada">
+					<div class="orden1 carrusel">
+						<!--CHEVROLET-->
+						<a href="https://www.chevrolet.com/"><img class="carrusel img2" src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/primary-navigation-icons/chevrolet-logo-v2.png"></a>
+						<!--FORD-->
+						<a class="convenio img2 ford" href="https://www.ford.com/"></a>
+						<!--Porshe-->
+						<a class="convenio img2 porsche" href="https://www.porsche.com/"><img class="convenio img2 porsche" src="{% static '/img/porsche_logo.png' %}"></a>
+						<!--Mercedes Benz-->
+						<a class="convenio img2 mercedes" href="https://www.mercedes-benz.com/en/"></a>
+						<!--Peugeout-->
+						<a href="https://www.peugeot.cl/"><img class="convenio img2 peugeot" src="https://www.peugeot.cl/content/dam/peugeot/master/home/peugeot-logo-alt.png"></a>
+						
+					</div>
+				</div>
+			</div>
+    		{% endblock index_cosas1 %}
+			
+			{% block index_cosas2 %}
+			<div class="fondo sucursal">
+				<h1 class="sucursal text">Nuestra sucursal</h1>
+				<h3 class="sucursal text">Puedes ubicarnos en nuestra sede principal.</h3>
+				<iframe class="sucursal iframe" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d587.4745936650412!2d-70.57966180724358!3d-33.59860578454271!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2scl!4v1685216277808!5m2!1sen!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+			{% endblock index_cosas2 %}
+
+			{% block sampletext %}
+			
+			{% endblock sampletext %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+{% endblock js %}

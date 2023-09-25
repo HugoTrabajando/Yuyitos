@@ -1,0 +1,97 @@
+{% load static %}
+
+<html>
+<!-- Hecho por Huguito-->
+<head>
+    <title>Almacen Yuyitos {% block titulo %}{% endblock titulo %}</title>
+	<!-- HAY QUE LLAMAR UN DISEÑO TUYO O DE BOOTSTRAP :) -->
+	<link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> 
+	<link type="text/css" rel="stylesheet" href="{% static 'css/fuente_letra.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/orden.css' %}">
+	<script src="{% static 'js/script.js' %}"></script>
+	<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+	<script src="{% static 'js/sweetalert2.all.min.js' %}"></script>
+	{% block js %}
+	
+	{% endblock js %}
+
+</head>
+<body class="body">
+<div class="container-fluid">
+	<!-- creo que esto es fila-->
+		<div>
+		
+		<header class="fondo header1"> <a class="header1 img" href="./index.html"></a> TORETO - Taller mecánico </header>
+		<!--indices-->
+		
+		<div class="orden1 index">
+		<a class="orden1 index" href="{% url 'INDEX' %}"> Inicio</a>
+	
+		{% block index_more %}
+		<!--añade mas cositas al index.... -->
+		{% if user.is_authenticated %}
+            <a class="orden1 index" href="{% url 'CERRAR' %}">Cerrar Sesion</a>
+
+			<a class="orden1 index" href="{% url 'REGISTRAR_CLIENTE' %}"> Registrar Cliente</a>
+			<a class="orden1 index" href="{% url 'REGISTRAR_REPUESTO' %}"> Registrar Repuesto</a>
+			<a class="orden1 index" href="{% url 'REGISTRAR_VEHICULO' %}"> Registrar Vehiculo</a>
+			<a class="orden1 index" href="{% url 'REGISTRAR_SERVICIO' %}"> Registrar Servicio</a>
+			{% if user.is_staff %} <a class="orden1 index" href="{% url 'REGISTRAR_HORA' %}"> Registrar hora de atencion</a> {% endif %}
+			<a class="orden1 index" >Bienvenido: {{user.first_name}} ({% if user.is_superuser %} superusuario{% else %} usuario{% endif %} {{user.username}})</a>
+
+		{% else %}
+			<a class="orden1 index" href="{% url 'REGISTRO' %}"> Registro</a> 
+			<a class="orden1 index" href="{% url 'LOGEAR' %}"> Autenticar</a> 
+
+			<a class="orden1 index" href="{% url 'PEDIR_REPUESTO' %}"> Pedir un repuesto</a>
+			<a class="orden1 index" href="{% url 'PEDIR_SERVICIO' %}"> Pedir servicio técnico</a>  
+        {% endif %}
+
+		{% endblock index_more %}
+		<button class="orden1 index" onclick="recuperar_ip()">Recuperar Ip</button>
+		</div>
+		<!--FIN indices-->
+			<div class="orden1">
+				{% block cosas1 %}
+
+  				{% endblock cosas1 %}
+				 
+			</div>
+			{% block index_cosas1 %}
+			
+			<!--OMITIR AUNQUE PUEDE SERVIR PARA INDEX...-->
+    		{% endblock index_cosas1 %}
+			
+			{% block index_cosas2 %}
+			
+			{% endblock index_cosas2 %}
+
+			{% block sampletext %}
+			
+			{% endblock sampletext %}
+			
+			<footer class="footer">
+				<h1>Contacto</h1>
+				<h3>¿Estás interesad@ en nuestros servicios? Contáctanos también en nuestras RRSS</h3>
+				<!--contacto por facebook-->
+				<a href="https://www.facebook.com"><img class="contacto img" src="https://play-lh.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg=s180-rw"></a>
+				<!--FIN contacto por facebook-->
+				<!--contacto por instagram-->
+				<a href="https://www.instagram.com"><img class="contacto img" src="https://play-lh.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw=s180-rw"></a>
+				<!--FIN contacto por facebook-->
+				<!--contacto por Whatsapp-->
+				<a href="https://api.whatsapp.com/send?phone=56912341234"><img class="contacto img" src="https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN=s180-rw"></a>
+				<!--FIN contacto por Whatsapp-->
+				<!--contacto por Telegram-->
+				<a href="https://www.telegram.com"><img class="contacto img" src="https://play-lh.googleusercontent.com/ZU9cSsyIJZo6Oy7HTHiEPwZg0m2Crep-d5ZrfajqtsH-qgUXSqKpNA2FpPDTn-7qA5Q=s180-rw"></a>
+				<!--FIN contacto por Telegram-->
+
+
+			</footer>
+		</div>
+</div>
+</body>
+	
+	
+	
+</html>

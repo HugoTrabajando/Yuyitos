@@ -1,0 +1,349 @@
+table, th, td {
+	border: 1px solid black;
+}
+
+.ejemplo1 {
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	width: 75%;
+	height: 50%;
+	overflow: hidden;
+	background: white;
+	padding: 30px;
+	display: block;
+	
+	transform: translateX(-100%);
+	transition: all 1.0s;
+}
+
+.ejemplo2 {
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	width: 75%;
+	height: 50%;
+	overflow: hidden;
+	background: white;
+	padding: 30px;
+	display: block;
+	
+	transform: translateX(-100%);
+	transition: all 1.0s;
+}
+
+.ejemplo3 {
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	width: 75%;
+	height: 50%;
+	overflow: hidden;
+	background: white;
+	padding: 30px;
+	display: block;
+	
+	transform: translateX(-100%);
+	transition: all 1.0s;
+}
+
+.ejemplo4 {
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	width: 75%;
+	height: 50%;		
+	overflow: hidden;
+	background: white;
+	padding: 30px;
+	display: block;
+	
+	transform: translateX(-100%);
+	transition: all 1.0s;
+}
+
+.ejemplo5 {
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	width: 75%;
+	height: 50%;
+	overflow: hidden;
+	background: white;
+	padding: 30px;
+	display: block;
+	
+	transform: translateX(-100%);
+	transition: all 1.0s;
+}
+
+#ejemplo1-checkbox {
+	display: none
+}
+#ejemplo2-checkbox {
+	display: none
+}
+#ejemplo3-checkbox {
+	display: none
+}
+#ejemplo4-checkbox {
+	display: none
+}
+#ejemplo5-checkbox {
+	display: none
+}
+
+header label {
+    float: right;
+    font-size: 28px;
+    margin: 6px 0px;
+    cursor: pointer;
+}
+
+#ejemplo1-checkbox:checked~.ejemplo1 {
+	transform: translateX(0) ;
+	overflow: hidden;
+}
+
+#ejemplo2-checkbox:checked~.ejemplo2 {
+	transform: translateX(0) ;
+	overflow: hidden;
+}
+
+#ejemplo3-checkbox:checked~.ejemplo3 {
+	transform: translateX(0) ;
+	overflow: hidden;
+}
+
+#ejemplo4-checkbox:checked~.ejemplo4 {
+	transform: translateX(0) ;
+	overflow: hidden;
+}
+#ejemplo5-checkbox:checked~.ejemplo5 {
+	transform: translateX(0) ;
+	overflow: hidden;
+}
+
+* {
+	margin:0px;
+	padding:0px;
+}
+
+.fondo {
+	background-image: url('../img/fondo_montaje.jpg');
+	background-position: center center;
+	background-attachment: fixed;
+	padding: 30px;
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+.header1 {
+	padding: 30px;
+	color: black;
+	font-size: 200%;
+	display: flex;
+}
+
+.header1.img {
+	margin: 0px;
+	background: transparent url('../img/toreto_taller_icon.png') no-repeat 0px 0px;
+	padding: 1px 0px;
+	width: 65px;
+	height: 53px;
+	background-size: auto 50px;
+	display: inline-block;
+}
+
+.orden1 {
+	margin: 30px;
+}
+
+.orden1.edit {
+	background-color: #007d584d;
+}
+
+.orden1.buscador {
+	margin: 15px 30px 0px 30px;
+	width: 75%;
+	display: flex;
+}
+
+.orden1.buscador.button {
+	margin: 0px;
+	padding: 15px;
+	width: auto;
+	display: flex;
+	align-content: center;
+}
+
+.orden1.index {
+	margin: 10px 0px 0px 30px;
+	display: inline-block;
+}
+
+.orden1.contacto {
+	margin: 10px 0px 0px 30px;
+	display: inline-block;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 300px;
+	height: 30px;
+}
+
+.orden1.contacto.mensaje {
+	margin: 10px 0px 0px 30px;
+	display: inline-block;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 491px;
+	min-width: 491px;
+	height: 100px;
+}
+
+@media screen and (max-width: 900px) {
+	.orden1.contacto.mensaje {
+		margin: 10px 0px 0px 30px;
+		display: inline-block;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 300px;
+		min-width: 30px;
+		height: 100px;
+	}
+}
+
+.orden1.contacto.button {
+	margin: 30px;
+	padding: 15px;
+	width: auto;
+	display: flex;
+	align-content: center;
+}
+
+.orden1.registro {
+	margin: 10px 0px 0px 30px;
+	display: inline-block;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 300px;
+	height: 30px;
+}
+
+.orden1.registro.button {
+	margin: 5px 20px;
+	padding: 15px;
+	width: auto;
+	display: flex;
+	align-content: center;
+}
+
+.carrusel1 {
+	padding:30px;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	display: flex;
+}
+
+.carrusel.img {
+	margin:10px;
+	padding:0px;
+	width: 350px;
+	display: flex;
+	border: solid 5px orange;
+	border-radius: 30px;
+}
+
+.carrusel.text {
+	text-align: center;
+}
+
+.contacto.img {
+	padding: 30px;
+	width: 128px;
+}
+
+.convenio {
+	padding:20px;
+	color: white;
+	background: black;
+	
+}
+
+.carrusel {
+	text-align: center;
+}
+.carrusel.img2 {
+	padding: 0px;
+	width: 125px;
+	vertical-align: bottom;
+}
+
+.convenio.img2.ford {
+	margin:10px;
+	background: transparent url('https://www.ford.com/cmslibs/etc/designs/brand_ford/brand/skin/ford/img/bsr-sprite2x.png') no-repeat -300px 0px;
+	padding: 30px 7px;
+	width: 137px;
+	background-size: auto 300px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.convenio.img2.porsche {
+	padding: 10px;
+	height: 85px;
+
+}
+
+.convenio.img2.mercedes {
+	background: transparent url('../img/mercedes_logo.svg') no-repeat 0px 0px;
+	padding: 37px;
+	background-size: auto 70px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.convenio.img2.peugeot {
+	padding: 5px;
+	height: 75px;
+}
+
+.sucursal {
+	margin:0px;
+}
+
+.sucursal.text {
+	margin:30px;
+}
+
+.sucursal.iframe {
+	margin:30px;
+	border: solid 0px orange;
+	border-radius: 30px;
+}
+
+
+.footer {
+	padding:30px
+}
+
+.test1 {
+	float:left
+	
+}
+
+.test_color1 {
+	background:#00bcd4; height: 25%; width: 100%
+}
+
+.test_color2 {
+	background:#ffeb3b; height: 25%; width: 100%
+}
+
+.test_color3 {
+	background:orange; height: 25%; width: 100%
+}
+
+.test_color4 {
+	background:black; height: 25%; color: white; padding: 30px;
+}
